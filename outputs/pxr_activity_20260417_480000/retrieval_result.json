@@ -1,0 +1,5 @@
+{
+  "mode": "fallback",
+  "selected_strategy": "chemistry_baselines",
+  "reason": "Fallback to supported chemistry baselines."
+}

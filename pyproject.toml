@@ -7,5 +7,9 @@ requires-python = ">=3.13"
 dependencies = [
     "anthropic>=0.89.0",
     "huggingface-hub[cli]>=1.0.0",
+    "numpy>=2.4.4",
+    "pandas>=3.0.2",
     "python-dotenv>=1.2.2",
+    "rdkit>=2026.3.1",
+    "scikit-learn>=1.8.0",
 ]

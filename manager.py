@@ -33,7 +33,7 @@ def parse_frontmatter(skill_path: Path) -> dict:
     match = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
     if not match:
         return {"name": skill_path.parent.name, "description": ""}
-    
+
     frontmatter = match.group(1)
     name = re.search(r"^name:\s*(.+)$", frontmatter, re.MULTILINE)
     desc = re.search(r"^description:\s*(.+?)(?=\n\w|\Z)", frontmatter, re.MULTILINE | re.DOTALL)
@@ -103,7 +103,7 @@ Respond ONLY with this JSON, no other text:
         max_tokens=300,
         messages=[{"role": "user", "content": prompt}]
     )
-    
+
     raw = resp.content[0].text.strip()
     # Strip markdown fences if present
     if raw.startswith("```"):
